@@ -66,4 +66,4 @@ We will notify you of any changes by updating the
 ## 8. Contact Us
 
 If you have any questions about this Privacy Policy, 
-please contact us at: your.email@gmail.com
+please contact us at: eshrak.sea4@gmail.com

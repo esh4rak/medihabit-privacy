@@ -111,9 +111,10 @@
         <li>Not use the app to harm yourself or others</li>
     </ul>
 
-    <h2>4. Health Connect Integration</h2>
-    <p>MediHabit integrates with Android Health Connect to read your physical activity data. By enabling this feature, you grant MediHabit permission to read your step count, distance, and calories burned from Health Connect. We only read data necessary to display your fitness information within the app. You can revoke this permission at any time through your device's Health Connect settings.</p>
-
+    <h2>4. Device Sensor Usage</h2>
+    <p>MediHabit uses your device's built-in step counter sensor to track your daily physical activity. This requires the Activity Recognition permission on Android 10 and above. By granting this permission, you allow MediHabit to read step data from the device sensor to display your daily step count, estimated distance, and estimated calories burned within the app.</p>
+    <p>The step counter runs as a background service to ensure steps are counted even when the app is not open. A persistent notification will be shown while the service is active. You can revoke the Activity Recognition permission at any time through <strong>Settings → Apps → MediHabit → Permissions</strong> on your device. Revoking this permission will stop step counting but will not affect any other features of the app.</p>
+    
     <h2>5. User Responsibilities</h2>
     <p>You are solely responsible for:</p>
     <ul>

@@ -100,11 +100,11 @@
         <li>Lipid profile readings (LDL, HDL, total cholesterol, triglycerides)</li>
         <li>Medication information and reminder schedules</li>
     </ul>
-    <p>With your explicit permission, MediHabit also reads the following data from Health Connect</p>
+    <p>MediHabit also automatically collects the following data using your device's built-in sensors:</p>
     <ul>
-        <li>Step count</li>
-        <li>Distance walked</li>
-        <li>Calories burned</li>
+        <li>Step count (via device step counter sensor)</li>
+        <li>Distance walked (estimated from step count)</li>
+        <li>Calories burned (estimated from step count)</li>
     </ul>
 
     <h2>3. How We Use Your Information</h2>
@@ -114,14 +114,27 @@
         <li>Show trends and charts of your health metrics</li>
         <li>Send medication reminders you have configured</li>
         <li>Calculate health indicators such as BMI and lipid ratios</li>
+        <li>Count daily steps and estimate distance and calories using the device sensor</li>
     </ul>
 
-   <h2>4. Health Connect Data</h2>
-        <p>MediHabit uses Android Health Connect to read your physical activity data. Specifically, we access step count, distance walked, and calories burned data. This data is displayed in the Pedometer feature of the app and is stored locally on your device only. It is never uploaded to any external server or shared with third parties.</p>
-        <p>Health Connect permissions are managed directly on your device. You can revoke access at any time by going to <strong>Health Connect → App permissions → MediHabit</strong> on your Android device.</p>
-        <p>Our use of Health Connect data complies with the <a href="https://developer.android.com/health-and-fitness/guides/health-connect/plan/data-use-policy" target="_blank">Health Connect Permissions Policy</a> and Android's data use requirements.</p>
-    
-    <h2>5. Data Sharing</h2>
+    <h2>4. Device Sensor Data</h2>
+    <p>MediHabit uses the built-in step counter sensor on your Android device to track your daily physical activity. This requires the Activity Recognition permission on Android 10 and above. The sensor data is processed entirely on your device and is never transmitted to any external server.</p>
+    <p>Step count data is used to calculate estimated distance walked and calories burned using standard estimation formulas. All calculated values are stored locally in a secure database on your device only.</p>
+    <p>You can revoke the Activity Recognition permission at any time by going to <strong>Settings → Apps → MediHabit → Permissions</strong> on your Android device. Revoking this permission will stop step counting but will not affect any other features of the app.</p>
+
+    <h2>5. Permissions We Use</h2>
+    <p>MediHabit requests only the permissions necessary to provide its features:</p>
+    <ul>
+        <li><strong>ACTIVITY_RECOGNITION</strong> — Required to access the device step counter sensor for tracking daily steps</li>
+        <li><strong>POST_NOTIFICATIONS</strong> — Required to send medication reminders</li>
+        <li><strong>FOREGROUND_SERVICE</strong> — Required to run the step counter in the background so steps are counted even when the app is not open</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Required to restart medication reminders after the device reboots</li>
+        <li><strong>SCHEDULE_EXACT_ALARM</strong> — Required to deliver medication reminders at precise times</li>
+        <li><strong>INTERNET</strong> — Required for Firebase push notifications only. No health data is sent over the internet</li>
+        <li><strong>VIBRATE</strong> — Required to vibrate the device when a medication reminder fires</li>
+    </ul>
+
+    <h2>6. Data Sharing</h2>
     <p>We do NOT:</p>
     <ul>
         <li>Share your data with any third parties</li>
@@ -130,23 +143,23 @@
         <li>Upload your health data to any external server</li>
     </ul>
 
-    <h2>6. Data Storage</h2>
-    <p>All data entered in MediHabit is stored locally on your device using a secure local database. We do not operate any servers or cloud storage for your health data.</p>
+    <h2>7. Data Storage</h2>
+    <p>All data entered in or collected by MediHabit is stored locally on your device using a secure local database. We do not operate any servers or cloud storage for your health data. Push notification tokens used for Firebase notifications do not contain any health information.</p>
 
-    <h2>7. Data Deletion</h2>
+    <h2>8. Data Deletion</h2>
     <p>You can delete all your data at any time by:</p>
     <ul>
         <li>Deleting individual records within the app</li>
-        <li>Uninstalling the app, which removes all locally stored data</li>
+        <li>Uninstalling the app, which removes all locally stored data from your device</li>
     </ul>
 
-    <h2>8. Children's Privacy</h2>
+    <h2>9. Children's Privacy</h2>
     <p>MediHabit is not intended for children under 13 years of age. We do not knowingly collect data from children.</p>
 
-    <h2>9. Changes to This Policy</h2>
+    <h2>10. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last updated" date at the top of this page.</p>
 
-    <h2>10. Contact Us</h2>
+    <h2>11. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:eshrak.sea4@gmail.com">eshrak.sea4@gmail.com</a></p>
 </div>
 
